@@ -37,7 +37,6 @@ class MainWindow(Tk):
         else:
             self.palindrome_label["foreground"] = "#af504c"
             self.palindrome_label["text"] = "Sorry, that's not a palindrome."
-        print(bool(text))
 
 if __name__ == "__main__":
     try:
