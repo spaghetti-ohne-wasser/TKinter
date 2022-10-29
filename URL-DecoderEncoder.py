@@ -27,12 +27,12 @@ class MainWindow(Tk):
         self.output_field.grid(row=3, column=0, columnspan=2, pady=10)
     
     def encode(self) -> None:
-        text: str = self.input_field.get(index1=0.1, index2=END)
+        text: str = self.input_field.get(index1=0.1, index2=END).strip()
         self.output_field.delete(index1=0.1, index2=END)
         self.output_field.insert(index=0.1, chars=quote(text, safe=""))
 
     def decode(self) -> None:
-        text: str = self.input_field.get(index1=0.1, index2=END)
+        text: str = self.input_field.get(index1=0.1, index2=END).strip()
         self.output_field.delete(index1=0.1, index2=END)
         self.output_field.insert(index=0.1, chars=unquote(text))
 
